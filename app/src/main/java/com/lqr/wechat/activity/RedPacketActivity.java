@@ -15,8 +15,8 @@ import android.widget.TextView;
 import com.lqr.wechat.R;
 import com.lqr.wechat.utils.UIUtils;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -24,33 +24,33 @@ import butterknife.InjectView;
  */
 public class RedPacketActivity extends BaseActivity {
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
-    @InjectView(R.id.tvTip)
+    @BindView(R.id.tvTip)
     TextView mTvTip;
 
-    @InjectView(R.id.tvMoneyLeft)
+    @BindView(R.id.tvMoneyLeft)
     TextView mTvMoneyLeft;
-    @InjectView(R.id.etMoney)
+    @BindView(R.id.etMoney)
     EditText mEtMoney;
-    @InjectView(R.id.tvMoneyRight)
+    @BindView(R.id.tvMoneyRight)
     TextView mTvMoneyRight;
 
-    @InjectView(R.id.etMessage)
+    @BindView(R.id.etMessage)
     EditText mEtMessage;
-    @InjectView(R.id.tvHint)
+    @BindView(R.id.tvHint)
     TextView mTvHint;
 
-    @InjectView(R.id.tvMoney)
+    @BindView(R.id.tvMoney)
     TextView mTvMoney;
-    @InjectView(R.id.btnOk)
+    @BindView(R.id.btnOk)
     Button mBtnOk;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_red_packet);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

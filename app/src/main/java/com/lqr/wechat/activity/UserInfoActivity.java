@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
 import com.lqr.optionitemview.OptionItemView;
 import com.lqr.wechat.AppConst;
 import com.lqr.wechat.R;
@@ -30,12 +29,11 @@ import com.lqr.wechat.utils.UIUtils;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.uinfo.constant.GenderEnum;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
-
 import java.util.List;
 import java.util.Map;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -52,45 +50,45 @@ public class UserInfoActivity extends BaseActivity {
     private String mAccount;
     private Contact mContact;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     //内容区
-    @InjectView(R.id.ivHeader)
+    @BindView(R.id.ivHeader)
     ImageView mIvHeader;
-    @InjectView(R.id.tvAlias)
+    @BindView(R.id.tvAlias)
     TextView mTvAlias;
-    @InjectView(R.id.tvAccount)
+    @BindView(R.id.tvAccount)
     TextView mTvAccount;
-    @InjectView(R.id.tvName)
+    @BindView(R.id.tvName)
     TextView mTvName;
-    @InjectView(R.id.ivGender)
+    @BindView(R.id.ivGender)
     ImageView mIvGender;
 
-    @InjectView(R.id.oivAliasAndTag)
+    @BindView(R.id.oivAliasAndTag)
     OptionItemView mOivAliasAndTag;
-    @InjectView(R.id.llArea)
+    @BindView(R.id.llArea)
     LinearLayout mLlArea;
-    @InjectView(R.id.tvArea)
+    @BindView(R.id.tvArea)
     TextView mTvArea;
-    @InjectView(R.id.llSignature)
+    @BindView(R.id.llSignature)
     LinearLayout mLlSignature;
-    @InjectView(R.id.tvSignature)
+    @BindView(R.id.tvSignature)
     TextView mTvSignature;
 
-    @InjectView(R.id.btnCheat)
+    @BindView(R.id.btnCheat)
     Button mBtnCheat;
-    @InjectView(R.id.btnVideoCheat)
+    @BindView(R.id.btnVideoCheat)
     Button mBtnVideoCheat;
-    @InjectView(R.id.btnAddFriend)
+    @BindView(R.id.btnAddFriend)
     Button mBtnAddFriend;
 
     //菜单区
-    @InjectView(R.id.rlMenu)
+    @BindView(R.id.rlMenu)
     RelativeLayout mRlMenu;
-    @InjectView(R.id.vMask)
+    @BindView(R.id.vMask)
     View mVMask;
-    @InjectView(R.id.svMenu)
+    @BindView(R.id.svMenu)
     ScrollView mSvMenu;
 
     @OnClick({R.id.oivAliasAndTag, R.id.btnCheat, R.id.btnVideoCheat, R.id.btnAddFriend, R.id.oivAlias, R.id.oivFriendsCirclePrivacySet, R.id.oivAddToBlackList, R.id.oivDelete})
@@ -215,7 +213,7 @@ public class UserInfoActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_user_info);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         initAnimation();
 

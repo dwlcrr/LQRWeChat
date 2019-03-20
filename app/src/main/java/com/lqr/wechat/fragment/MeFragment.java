@@ -26,8 +26,8 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import cn.bingoogolapple.qrcode.zxing.QRCodeEncoder;
 
@@ -45,11 +45,11 @@ public class MeFragment extends BaseFragment {
     private ImageView mIvGenderQRCodeCard;
     private ImageView mIvCardQRCodeCard;
 
-    @InjectView(R.id.ivHeader)
+    @BindView(R.id.ivHeader)
     ImageView mIvHeader;
-    @InjectView(R.id.tvName)
+    @BindView(R.id.tvName)
     TextView mTvName;
-    @InjectView(R.id.tvAccount)
+    @BindView(R.id.tvAccount)
     TextView mTvAccount;
 
 
@@ -103,7 +103,7 @@ public class MeFragment extends BaseFragment {
     @Override
     public View initView() {
         View view = View.inflate(getActivity(), R.layout.fragment_me, null);
-        ButterKnife.inject(this, view);
+        ButterKnife.bind(this, view);
         return view;
     }
 

@@ -37,8 +37,8 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 import static com.netease.nimlib.sdk.msg.constant.SystemMessageType.TeamInvite;
 
@@ -53,11 +53,11 @@ public class ContactsFragment extends BaseFragment {
     private int i;
     private List<Friend> mFriends = new ArrayList<>();
 
-    @InjectView(R.id.rvContacts)
+    @BindView(R.id.rvContacts)
     LQRRecyclerView mRvContacts;
-    @InjectView(R.id.quickIndexBar)
+    @BindView(R.id.quickIndexBar)
     QuickIndexBar mQuickIndexBar;
-    @InjectView(R.id.tvLetter)
+    @BindView(R.id.tvLetter)
     TextView mTvLetter;
 
     //列表首尾布局
@@ -76,7 +76,7 @@ public class ContactsFragment extends BaseFragment {
     @Override
     public View initView() {
         View view = View.inflate(getActivity(), R.layout.fragment_contacts, null);
-        ButterKnife.inject(this, view);
+        ButterKnife.bind(this, view);
         initHeaderViewAndFooterView();
         return view;
     }

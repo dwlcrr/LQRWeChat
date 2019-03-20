@@ -21,8 +21,8 @@ import com.lqr.wechat.view.CustomDialog;
 import com.netease.nimlib.sdk.uinfo.constant.GenderEnum;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import cn.bingoogolapple.qrcode.zxing.QRCodeEncoder;
 
@@ -42,7 +42,7 @@ public class AddFriendActivity extends BaseActivity {
     private ImageView mIvGenderQRCodeCard;
     private ImageView mIvCardQRCodeCard;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @OnClick({R.id.etContent, R.id.ivQRCordCard})
@@ -114,7 +114,7 @@ public class AddFriendActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_add_friend);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         initToolbar();
     }

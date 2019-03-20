@@ -23,8 +23,8 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -39,16 +39,16 @@ public class SearchUserActivity extends BaseActivity {
     public static final boolean SEARCH_USER_LOCAL = true;
     public static final boolean SEARCH_USER_REMOTE = false;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.etSearch)
+    @BindView(R.id.etSearch)
     EditText mEtSearch;
 
-    @InjectView(R.id.rlNoResultTip)
+    @BindView(R.id.rlNoResultTip)
     RelativeLayout mRlNoResultTip;
-    @InjectView(R.id.llSearch)
+    @BindView(R.id.llSearch)
     LinearLayout mLlSearch;
-    @InjectView(R.id.tvMsg)
+    @BindView(R.id.tvMsg)
     TextView mTvMsg;
 
     @Override
@@ -59,7 +59,7 @@ public class SearchUserActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_search_user);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

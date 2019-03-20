@@ -24,8 +24,8 @@ import com.netease.nimlib.sdk.auth.LoginInfo;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import me.drakeet.materialdialog.MaterialDialog;
 
@@ -39,19 +39,19 @@ public class LoginActivity extends BaseActivity {
     private String mPassword;
     private String mToken;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
-    @InjectView(R.id.etPhone)
+    @BindView(R.id.etPhone)
     EditText mEtPhone;
-    @InjectView(R.id.etPwd)
+    @BindView(R.id.etPwd)
     EditText mEtPwd;
-    @InjectView(R.id.vLinePhone)
+    @BindView(R.id.vLinePhone)
     View mVLinePhone;
-    @InjectView(R.id.vLinePwd)
+    @BindView(R.id.vLinePwd)
     View mVLinePwd;
 
-    @InjectView(R.id.btnLogin)
+    @BindView(R.id.btnLogin)
     Button mBtnLogin;
     private AbortableFuture<LoginInfo> mLoginRequest;
 
@@ -63,7 +63,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_login);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
 
         if (!TextUtils.isEmpty(mEtPhone.getText().toString()) && !TextUtils.isEmpty(mEtPwd.getText().toString())) {

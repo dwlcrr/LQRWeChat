@@ -35,8 +35,8 @@ import com.netease.nimlib.sdk.team.model.Team;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import cn.bingoogolapple.qrcode.core.QRCodeView;
 import cn.bingoogolapple.qrcode.zxing.QRCodeDecoder;
@@ -53,36 +53,36 @@ public class ScanActivity extends BaseActivity implements QRCodeView.Delegate {
     private FrameLayout mView;
     private PopupWindow mPopupWindow;
 
-    @InjectView(R.id.zxingview)
+    @BindView(R.id.zxingview)
     ZXingView mZxingview;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
-    @InjectView(R.id.llSaoma)
+    @BindView(R.id.llSaoma)
     LinearLayout mLlSaoma;
-    @InjectView(R.id.llFengmian)
+    @BindView(R.id.llFengmian)
     LinearLayout mLlFengmian;
-    @InjectView(R.id.llJiejing)
+    @BindView(R.id.llJiejing)
     LinearLayout mLlJiejing;
-    @InjectView(R.id.llFanyi)
+    @BindView(R.id.llFanyi)
     LinearLayout mLlFanyi;
 
-    @InjectView(R.id.ivSaomaPress)
+    @BindView(R.id.ivSaomaPress)
     ImageView mIvSaomaPress;
-    @InjectView(R.id.ivSaomaNormal)
+    @BindView(R.id.ivSaomaNormal)
     ImageView mIvSaomaNormal;
-    @InjectView(R.id.ivFengmianPress)
+    @BindView(R.id.ivFengmianPress)
     ImageView mIvFengmianPress;
-    @InjectView(R.id.ivFengmianNormal)
+    @BindView(R.id.ivFengmianNormal)
     ImageView mIvFengmianNormal;
-    @InjectView(R.id.ivJiejingPress)
+    @BindView(R.id.ivJiejingPress)
     ImageView mIvJiejingPress;
-    @InjectView(R.id.ivJiejingNormal)
+    @BindView(R.id.ivJiejingNormal)
     ImageView mIvJiejingNormal;
-    @InjectView(R.id.ivFanyiPress)
+    @BindView(R.id.ivFanyiPress)
     ImageView mIvFanyiPress;
-    @InjectView(R.id.ivFanyiNormal)
+    @BindView(R.id.ivFanyiNormal)
     ImageView mIvFanyiNormal;
 
     @OnClick({R.id.llSaoma, R.id.llFengmian, R.id.llJiejing, R.id.llFanyi})
@@ -106,7 +106,7 @@ public class ScanActivity extends BaseActivity implements QRCodeView.Delegate {
     @Override
     public void initView() {
         setContentView(R.layout.activity_scan);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         selectBottomOne(0);
     }

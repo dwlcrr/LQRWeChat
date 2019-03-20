@@ -22,8 +22,8 @@ import com.zhy.http.okhttp.callback.FileCallBack;
 
 import java.io.File;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import okhttp3.Call;
 import okhttp3.Request;
 
@@ -37,15 +37,15 @@ public class FilePreviewActivity extends BaseActivity {
     private IMMessage mMessage;
     private FileAttachment mFa;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.ivPic)
+    @BindView(R.id.ivPic)
     ImageView mIvPic;
-    @InjectView(R.id.tvName)
+    @BindView(R.id.tvName)
     TextView mTvName;
-    @InjectView(R.id.pbFile)
+    @BindView(R.id.pbFile)
     ProgressBar mPbFile;
-    @InjectView(R.id.btnOpen)
+    @BindView(R.id.btnOpen)
     Button mBtnOpen;//其他应用打开 下载
 
     @Override
@@ -62,7 +62,7 @@ public class FilePreviewActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_file_preview);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
 
         setFileInfo();

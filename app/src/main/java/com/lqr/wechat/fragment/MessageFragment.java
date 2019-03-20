@@ -39,8 +39,8 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -55,7 +55,7 @@ public class MessageFragment extends BaseFragment {
     private View mHeaderView;
     private LQRNineGridImageViewAdapter<NimUserInfo> mNineGridAdapter;
 
-    @InjectView(R.id.cvMessage)
+    @BindView(R.id.cvMessage)
     RecyclerView mCvMessage;
     MainActivity activity;
 
@@ -81,7 +81,7 @@ public class MessageFragment extends BaseFragment {
     @Override
     public View initView() {
         View view = View.inflate(getActivity(), R.layout.fragment_message, null);
-        ButterKnife.inject(this, view);
+        ButterKnife.bind(this, view);
 
 //        mHeaderView = View.inflate(getActivity(), R.layout.header_message_rv, null);
 //        mHeaderView.setVisibility(View.GONE);

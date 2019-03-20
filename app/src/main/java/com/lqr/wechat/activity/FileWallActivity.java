@@ -35,7 +35,7 @@ import java.util.Collections;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * @创建者 CSDN_LQR
@@ -55,25 +55,25 @@ public class FileWallActivity extends BaseActivity {
 
     private List<IMMessage> mCheckedData = new ArrayList<>();
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.cvFile)
+    @BindView(R.id.cvFile)
     LQRRecyclerView mCvFile;
 
-    @InjectView(R.id.llBottom)
+    @BindView(R.id.llBottom)
     LinearLayout mLlBottom;
-    @InjectView(R.id.rlShare)
+    @BindView(R.id.rlShare)
     RelativeLayout mRlShare;
-    @InjectView(R.id.rlCollect)
+    @BindView(R.id.rlCollect)
     RelativeLayout mRlCollect;
-    @InjectView(R.id.rlDel)
+    @BindView(R.id.rlDel)
     RelativeLayout mRlDel;
 
-    @InjectView(R.id.btnShare)
+    @BindView(R.id.btnShare)
     Button mBtnShare;
-    @InjectView(R.id.btnCollect)
+    @BindView(R.id.btnCollect)
     Button mBtnCollect;
-    @InjectView(R.id.btnDel)
+    @BindView(R.id.btnDel)
     Button mBtnDel;
 
 
@@ -88,7 +88,7 @@ public class FileWallActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_file_wall);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

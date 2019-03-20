@@ -5,21 +5,21 @@ import android.view.MenuItem;
 
 import com.lqr.wechat.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
  * @描述 我的票券--卡包
  */
 public class MyCouponActivity extends BaseActivity {
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_my_coupon);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

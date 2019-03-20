@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 import cn.bingoogolapple.qrcode.zxing.QRCodeEncoder;
 
 /**
@@ -47,19 +47,19 @@ public class QRCodeCardActivity extends BaseActivity {
     private boolean isUserInfoQRcode = true;
     private LQRNineGridImageViewAdapter<NimUserInfo> mNineGridAdapter;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.ivHeader)
+    @BindView(R.id.ivHeader)
     ImageView mIvHeader;
-    @InjectView(R.id.ngiv)
+    @BindView(R.id.ngiv)
     LQRNineGridImageView mNgivHeader;
-    @InjectView(R.id.tvName)
+    @BindView(R.id.tvName)
     TextView mTtvName;
-    @InjectView(R.id.ivGender)
+    @BindView(R.id.ivGender)
     ImageView mIvGender;
-    @InjectView(R.id.ivCard)
+    @BindView(R.id.ivCard)
     ImageView mIvCard;
-    @InjectView(R.id.tvTip)
+    @BindView(R.id.tvTip)
     TextView mTvTip;
 
     @Override
@@ -79,7 +79,7 @@ public class QRCodeCardActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_qrcode_card);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         mNineGridAdapter = new LQRNineGridImageViewAdapter<NimUserInfo>() {
             @Override

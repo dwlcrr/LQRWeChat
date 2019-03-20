@@ -2,24 +2,22 @@ package com.lqr.wechat.activity;
 
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-
 import com.lqr.wechat.R;
-
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
  * @描述 账号与安全
  */
 public class AccountAndSafeSetActivity extends BaseActivity {
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_account_and_safe_set);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

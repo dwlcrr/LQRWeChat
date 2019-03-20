@@ -14,8 +14,8 @@ import com.lqr.wechat.R;
 import com.lqr.wechat.utils.StringUtils;
 import com.lqr.wechat.view.ProgressWebView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -30,9 +30,9 @@ public class WebViewActivity extends BaseActivity {
 
     private boolean isLoading = false;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.webview)
+    @BindView(R.id.webview)
     public ProgressWebView mWebView;
 
     @Override
@@ -61,7 +61,7 @@ public class WebViewActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_webview);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
 
         //设置webView

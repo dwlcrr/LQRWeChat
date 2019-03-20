@@ -11,7 +11,7 @@ import com.lqr.wechat.nimsdk.NimAccountSDK;
 import com.lqr.wechat.view.CustomDialog;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -22,7 +22,7 @@ public class SettingActivity extends BaseActivity {
 
     Intent intent;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
     private View mExitDialogView;
     private CustomDialog mDialog;
@@ -96,7 +96,7 @@ public class SettingActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_setting);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

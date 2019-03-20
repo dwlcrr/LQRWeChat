@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.text.TextUtils;
 import android.view.Window;
 import android.view.WindowManager;
-
 import com.lqr.wechat.R;
 import com.lqr.wechat.nimsdk.NimAccountSDK;
 import com.lqr.wechat.utils.UIUtils;
-
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -45,7 +43,7 @@ public class SplashActivity extends BaseActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//隐藏状态栏
         setContentView(R.layout.activity_splash);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     /**

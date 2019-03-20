@@ -11,8 +11,8 @@ import com.lqr.wechat.nimsdk.NimFriendSDK;
 import com.lqr.wechat.utils.UIUtils;
 import com.netease.nimlib.sdk.RequestCallback;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -24,12 +24,12 @@ public class PostscriptActivity extends BaseActivity {
     public String mAccount;//账号
     public String mMsg;//附言
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.btnOk)
+    @BindView(R.id.btnOk)
     Button mBtnOk;
 
-    @InjectView(R.id.etMsg)
+    @BindView(R.id.etMsg)
     EditText mEtMsg;
 
     @OnClick({R.id.btnOk, R.id.ibClear})
@@ -74,7 +74,7 @@ public class PostscriptActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_postscript);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

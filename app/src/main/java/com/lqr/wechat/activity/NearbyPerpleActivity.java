@@ -6,8 +6,8 @@ import android.view.View;
 
 import com.lqr.wechat.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -15,13 +15,13 @@ import butterknife.InjectView;
  */
 
 public class NearbyPerpleActivity extends BaseActivity {
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_nearby_perple);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         showMaterialDialog("提示", "查看附近的人功能将获取你的位置信息，你的位置信息会被保留一段时间。通过列表右上角的清除功能可随时手动清除位置信息。", "确定", "取消", new View.OnClickListener() {
             @Override

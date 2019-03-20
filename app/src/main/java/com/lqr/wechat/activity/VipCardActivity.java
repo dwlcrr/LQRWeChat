@@ -5,21 +5,21 @@ import android.view.MenuItem;
 
 import com.lqr.wechat.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
  * @描述 会员卡--卡包
  */
 public class VipCardActivity extends BaseActivity {
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_vip_card);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

@@ -47,7 +47,7 @@ public class DiscoveryFragment extends BaseFragment {
     @Override
     public View initView() {
         View view = View.inflate(getActivity(), R.layout.fragment_discovery, null);
-        ButterKnife.inject(this, view);
+        ButterKnife.bind(this, view);
         return view;
     }
 }

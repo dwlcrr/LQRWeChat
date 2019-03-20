@@ -72,8 +72,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import butterknife.OnTouch;
 import cn.bingoogolapple.refreshlayout.BGANormalRefreshViewHolder;
@@ -134,56 +134,56 @@ public class SessionActivity extends BaseActivity implements IEmoticonSelectedLi
 
     private boolean mTouched;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.refreshLayout)
+    @BindView(R.id.refreshLayout)
     BGARefreshLayout mRefreshLayout;
 
-    @InjectView(R.id.cvMessage)
+    @BindView(R.id.cvMessage)
     LQRRecyclerView mCvMessage;
 
-    @InjectView(R.id.llButtomFunc)
+    @BindView(R.id.llButtomFunc)
     LinearLayout mLlButtomFunc;
-    @InjectView(R.id.ivAudio)
+    @BindView(R.id.ivAudio)
     ImageView mIvAudio;
-    @InjectView(R.id.etContent)
+    @BindView(R.id.etContent)
     EditText mEtContent;
-    @InjectView(R.id.btnAudio)
+    @BindView(R.id.btnAudio)
     Button mBtnAudio;
-    @InjectView(R.id.ivEmo)
+    @BindView(R.id.ivEmo)
     ImageView mIvEmo;
-    @InjectView(R.id.ivAdd)
+    @BindView(R.id.ivAdd)
     ImageView mIvAdd;
 
-    @InjectView(R.id.btnSend)
+    @BindView(R.id.btnSend)
     Button mBtnSend;
-    @InjectView(R.id.flBottom)
+    @BindView(R.id.flBottom)
     FrameLayout mFlBottom;
-    @InjectView(R.id.epv)
+    @BindView(R.id.epv)
     EmoticonPickerView mEpv;
-    @InjectView(R.id.vpFunc)
+    @BindView(R.id.vpFunc)
     ViewPager mVpFunc;
 
-    @InjectView(R.id.dv)
+    @BindView(R.id.dv)
     DotView mDv;
-    @InjectView(R.id.flPlayAudio)
+    @BindView(R.id.flPlayAudio)
     FrameLayout mFlPlayAudio;
-    @InjectView(R.id.cTimer)
+    @BindView(R.id.cTimer)
     Chronometer mCTimer;
 
-    @InjectView(R.id.tvTimerTip)
+    @BindView(R.id.tvTimerTip)
     TextView mTvTimerTip;
-    @InjectView(R.id.llPlayVideo)
+    @BindView(R.id.llPlayVideo)
     LinearLayout mLlPlayVideo;
-    @InjectView(R.id.vrvVideo)
+    @BindView(R.id.vrvVideo)
     LQRVideoRecordView mVrvVideo;
-    @InjectView(R.id.tvTipOne)
+    @BindView(R.id.tvTipOne)
     TextView mTvTipOne;
-    @InjectView(R.id.tvTipTwo)
+    @BindView(R.id.tvTipTwo)
     TextView mTvTipTwo;
-    @InjectView(R.id.rp)
+    @BindView(R.id.rp)
     LQRRecordProgress mRp;
-    @InjectView(R.id.btnVideo)
+    @BindView(R.id.btnVideo)
     Button mBtnVideo;
     private Observer<TeamMember> memberRemoveObserver;
     private Observer<List<TeamMember>> memberUpdateObserver;
@@ -234,7 +234,7 @@ public class SessionActivity extends BaseActivity implements IEmoticonSelectedLi
     @Override
     public void initView() {
         setContentView(R.layout.activity_session);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         initEmotionPickerView();
         initEmotionKeyboard();

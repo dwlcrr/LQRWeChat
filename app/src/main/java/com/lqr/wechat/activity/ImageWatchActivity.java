@@ -33,8 +33,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import okhttp3.Call;
 
@@ -55,15 +55,15 @@ public class ImageWatchActivity extends BaseActivity {
     private int mCurrentItem;
     private boolean mIsEditMode;//标记是否是从文件墙界面的编辑模式下调用的
 
-    @InjectView(R.id.root)
+    @BindView(R.id.root)
     RelativeLayout mRlRoot;
-    @InjectView(R.id.btnWatchOrigImage)
+    @BindView(R.id.btnWatchOrigImage)
     Button mBtnWatchOrigImage;
-    @InjectView(R.id.vpImage)
+    @BindView(R.id.vpImage)
     ViewPager mVpImage;
-    @InjectView(R.id.pbLoading)
+    @BindView(R.id.pbLoading)
     ProgressBar mPbLoading;
-    @InjectView(R.id.ivShowPic)
+    @BindView(R.id.ivShowPic)
     ImageView mIvShowPic;
 
 
@@ -98,7 +98,7 @@ public class ImageWatchActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_image_watch);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         mAdapter = new PhotoViewPagerAdapter();
         mVpImage.setAdapter(mAdapter);

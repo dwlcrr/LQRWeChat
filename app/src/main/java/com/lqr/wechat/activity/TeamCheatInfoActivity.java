@@ -39,7 +39,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -70,23 +70,23 @@ public class TeamCheatInfoActivity extends BaseActivity {
     private LQRAdapterForRecyclerView mAdapter;
     private CustomDialog mDialog;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.rvMember)
+    @BindView(R.id.rvMember)
     LQRRecyclerView mRvMember;
-    @InjectView(R.id.oivTeamName)
+    @BindView(R.id.oivTeamName)
     OptionItemView mOivTeamName;
-    @InjectView(R.id.tvAnnouncement)
+    @BindView(R.id.tvAnnouncement)
     TextView mTvAnnouncement;
-    @InjectView(R.id.vLineTeamManage)
+    @BindView(R.id.vLineTeamManage)
     View mVLineTeamManage;
-    @InjectView(R.id.oivTeamManage)
+    @BindView(R.id.oivTeamManage)
     OptionItemView mOivTeamManage;
-    @InjectView(R.id.oivNickNameInTeam)
+    @BindView(R.id.oivNickNameInTeam)
     OptionItemView mOivNickNameInTeam;
-    @InjectView(R.id.llShowNickName)
+    @BindView(R.id.llShowNickName)
     LinearLayout mLlShowNickName;
-    @InjectView(R.id.sbShowNickName)
+    @BindView(R.id.sbShowNickName)
     SwitchButton mSbShowNickName;
 
     @OnClick({R.id.oivTeamName, R.id.oivQRCordCard, R.id.llAnnouncement, R.id.oivNickNameInTeam, R.id.btnQuitTeam, R.id.oivClearMsgRecord})
@@ -189,7 +189,7 @@ public class TeamCheatInfoActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_team_cheat_info);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         initToolbar();
     }

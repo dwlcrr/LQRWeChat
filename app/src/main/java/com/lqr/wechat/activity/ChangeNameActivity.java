@@ -15,8 +15,8 @@ import com.netease.nimlib.sdk.uinfo.constant.UserInfoFieldEnum;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -27,11 +27,11 @@ public class ChangeNameActivity extends BaseActivity {
 
     private String mName;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.btnOk)
+    @BindView(R.id.btnOk)
     Button mBtnOk;
-    @InjectView(R.id.etName)
+    @BindView(R.id.etName)
     EditText mEtName;
 
     @OnClick({R.id.btnOk})
@@ -70,7 +70,7 @@ public class ChangeNameActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_change_name);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         mEtName.setText(mName);
         mEtName.setSelection(mName.length());

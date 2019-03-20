@@ -12,8 +12,8 @@ import android.widget.EditText;
 import com.lqr.wechat.R;
 import com.lqr.wechat.utils.UIUtils;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -21,25 +21,25 @@ import butterknife.InjectView;
  */
 public class OtherLoginActivity extends BaseActivity {
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
-    @InjectView(R.id.etPhone)
+    @BindView(R.id.etPhone)
     EditText mEtPhone;
-    @InjectView(R.id.etPwd)
+    @BindView(R.id.etPwd)
     EditText mEtPwd;
-    @InjectView(R.id.vLinePhone)
+    @BindView(R.id.vLinePhone)
     View mVLinePhone;
-    @InjectView(R.id.vLinePwd)
+    @BindView(R.id.vLinePwd)
     View mVLinePwd;
 
-    @InjectView(R.id.btnLogin)
+    @BindView(R.id.btnLogin)
     Button mBtnLogin;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_other_login);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         initToolbar();
     }

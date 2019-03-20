@@ -15,8 +15,8 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -28,12 +28,12 @@ public class TeamAnnouncementEditActivity extends BaseActivity {
 
     public static final String TEAM = "team";
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.btnOk)
+    @BindView(R.id.btnOk)
     Button mBtnOk;
 
-    @InjectView(R.id.etContent)
+    @BindView(R.id.etContent)
     EditText mEtContent;
     private Team mTeam;
 
@@ -77,7 +77,7 @@ public class TeamAnnouncementEditActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_team_announcement_edit);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

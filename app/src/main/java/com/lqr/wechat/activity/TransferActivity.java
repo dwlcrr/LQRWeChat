@@ -7,10 +7,9 @@ import android.view.MenuItem;
 import android.widget.EditText;
 
 import com.lqr.wechat.R;
-import com.lqr.wechat.utils.UIUtils;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -18,16 +17,16 @@ import butterknife.InjectView;
  */
 public class TransferActivity extends BaseActivity {
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
-    @InjectView(R.id.etMoney)
+    @BindView(R.id.etMoney)
     EditText mEtMoney;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_transfer);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

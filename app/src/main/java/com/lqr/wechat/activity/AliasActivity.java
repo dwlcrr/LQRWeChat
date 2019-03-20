@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-
 import com.lqr.wechat.R;
 import com.lqr.wechat.model.Contact;
 import com.lqr.wechat.nimsdk.NimFriendSDK;
@@ -18,8 +17,8 @@ import com.netease.nimlib.sdk.friend.constant.FriendFieldEnum;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -33,29 +32,29 @@ public class AliasActivity extends BaseActivity {
 
     public static final int REQ_CHANGE_ALIAS = 100;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.btnOk)
+    @BindView(R.id.btnOk)
     Button mBtnOk;
-    @InjectView(R.id.etAlias)
+    @BindView(R.id.etAlias)
     EditText mEtAlias;
-    @InjectView(R.id.ibClearAlias)
+    @BindView(R.id.ibClearAlias)
     ImageButton mIbClearAlias;
-    @InjectView(R.id.etTag)
+    @BindView(R.id.etTag)
     EditText mEtTag;
-    @InjectView(R.id.ibClearTag)
+    @BindView(R.id.ibClearTag)
     ImageButton mIbClearTag;
-    @InjectView(R.id.etPhone)
+    @BindView(R.id.etPhone)
     EditText mEtPhone;
-    @InjectView(R.id.ibClearPhone)
+    @BindView(R.id.ibClearPhone)
     ImageButton mIbClearPhone;
-    @InjectView(R.id.etDesc)
+    @BindView(R.id.etDesc)
     EditText mEtDesc;
-    @InjectView(R.id.ibClearDesc)
+    @BindView(R.id.ibClearDesc)
     ImageButton mIbClearDesc;
-    @InjectView(R.id.etPicture)
+    @BindView(R.id.etPicture)
     EditText mEtPicture;
-    @InjectView(R.id.ibClearPicture)
+    @BindView(R.id.ibClearPicture)
     ImageButton mIbClearPicture;
 
     @OnClick({R.id.btnOk})
@@ -79,7 +78,7 @@ public class AliasActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_alias);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
 
         String alias = mContact.getFriend().getAlias();

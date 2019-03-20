@@ -8,8 +8,8 @@ import com.lqr.wechat.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -19,14 +19,14 @@ public class LocationActivity extends BaseActivity {
 
     private List<String> mData = new ArrayList<>();
 
-    @InjectView(R.id.cvLocation)
+    @BindView(R.id.cvLocation)
     LQRRecyclerView mCvLocation;
     private LQRAdapterForRecyclerView<String> mAdapter;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_location);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     @Override

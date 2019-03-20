@@ -23,8 +23,8 @@ import com.zhy.http.okhttp.callback.FileCallBack;
 
 import java.io.File;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import okhttp3.Call;
 
 /**
@@ -35,11 +35,11 @@ public class ShowBigImageActivity extends BaseActivity {
 
     private String mUrl;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.pv)
+    @BindView(R.id.pv)
     PhotoView mPv;
-    @InjectView(R.id.pb)
+    @BindView(R.id.pb)
     ProgressBar mPb;
     private FrameLayout mView;
     private PopupWindow mPopupWindow;
@@ -52,7 +52,7 @@ public class ShowBigImageActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_show_big_image);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         mPv.enable();// 启用图片缩放功能
 

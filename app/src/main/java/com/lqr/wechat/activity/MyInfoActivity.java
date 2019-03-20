@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 import static com.lqr.wechat.activity.SessionActivity.IMAGE_PICKER;
@@ -63,21 +63,21 @@ public class MyInfoActivity extends BaseActivity {
         }
     };
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.llHeader)
+    @BindView(R.id.llHeader)
     LinearLayout mLlHeader;
-    @InjectView(R.id.ivHeader)
+    @BindView(R.id.ivHeader)
     ImageView mIvHeader;
-    @InjectView(R.id.oivName)
+    @BindView(R.id.oivName)
     OptionItemView mOivName;
-    @InjectView(R.id.oivQRCordCard)
+    @BindView(R.id.oivQRCordCard)
     OptionItemView mOivQRCordCard;
-    @InjectView(R.id.oivAccount)
+    @BindView(R.id.oivAccount)
     OptionItemView mOivAccount;
-    @InjectView(R.id.oivGender)
+    @BindView(R.id.oivGender)
     OptionItemView mOivGender;
-    @InjectView(R.id.oivSignature)
+    @BindView(R.id.oivSignature)
     OptionItemView mOivSignature;
 
     @OnClick({R.id.llHeader, R.id.ivHeader, R.id.oivName, R.id.oivQRCordCard, R.id.oivGender, R.id.oivSignature})
@@ -157,7 +157,7 @@ public class MyInfoActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_my_info);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

@@ -5,8 +5,8 @@ import android.widget.LinearLayout;
 
 import com.lqr.wechat.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -14,13 +14,13 @@ import butterknife.InjectView;
  */
 public class Func2Fragment extends BaseFragment {
 
-    @InjectView(R.id.llVoice)
+    @BindView(R.id.llVoice)
     LinearLayout mLlVoice;
 
     @Override
     public View initView() {
         View view = View.inflate(getActivity(), R.layout.fragment_func_page2, null);
-        ButterKnife.inject(this, view);
+        ButterKnife.bind(this, view);
         return view;
     }
 }

@@ -7,22 +7,22 @@ import android.view.View;
 import com.lqr.wechat.R;
 import com.lqr.wechat.view.CustomDialog;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
  * @描述 朋友的优惠券-卡包
  */
 public class FriendsCouponActivity extends BaseActivity {
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
     private CustomDialog mDialog;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_friends_coupon);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         showTipDialog();
     }

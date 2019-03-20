@@ -12,8 +12,8 @@ import com.lqr.wechat.activity.SessionActivity;
 import com.lqr.wechat.activity.TransferActivity;
 import com.lqr.wechat.view.CustomDialog;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 import static com.lqr.wechat.R.id.tvOne;
@@ -31,22 +31,22 @@ public class Func1Fragment extends BaseFragment {
     private TextView mTvOne;
     private TextView mTvTwo;
 
-    @InjectView(R.id.llPic)
+    @BindView(R.id.llPic)
     LinearLayout mLlPic;
-    @InjectView(R.id.llRecord)
+    @BindView(R.id.llRecord)
     LinearLayout mLlRecord;
-    @InjectView(R.id.llRedPacket)
+    @BindView(R.id.llRedPacket)
     LinearLayout mLlRedPacket;
-    @InjectView(R.id.llTransfer)
+    @BindView(R.id.llTransfer)
     LinearLayout mLlTransfer;
 
-    @InjectView(R.id.llCollection)
+    @BindView(R.id.llCollection)
     LinearLayout mLlCollection;
-    @InjectView(R.id.llLocation)
+    @BindView(R.id.llLocation)
     LinearLayout mLlLocation;
-    @InjectView(R.id.llVideo)
+    @BindView(R.id.llVideo)
     LinearLayout mLlVideo;
-    @InjectView(R.id.llBusinessCard)
+    @BindView(R.id.llBusinessCard)
     LinearLayout mLlBusinessCard;
 
     Intent mIntent;
@@ -119,7 +119,7 @@ public class Func1Fragment extends BaseFragment {
     @Override
     public View initView() {
         View view = View.inflate(getActivity(), R.layout.fragment_func_page1, null);
-        ButterKnife.inject(this, view);
+        ButterKnife.bind(this, view);
         return view;
     }
 

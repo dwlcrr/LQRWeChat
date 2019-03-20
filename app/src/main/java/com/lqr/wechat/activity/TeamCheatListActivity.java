@@ -36,8 +36,8 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
@@ -51,20 +51,20 @@ public class TeamCheatListActivity extends BaseActivity {
     private TextView mFooterTv;
     private LQRNineGridImageViewAdapter<NimUserInfo> mNineGridAdapter;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.llContent)
+    @BindView(R.id.llContent)
     LinearLayout mLlContent;
 
-    @InjectView(R.id.tvTip)
+    @BindView(R.id.tvTip)
     TextView mTvTip;
-    @InjectView(R.id.rvTeamList)
+    @BindView(R.id.rvTeamList)
     LQRRecyclerView mRvTeamList;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_team_cheat_list);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         initHeaderViewAndFooterView();
         mNineGridAdapter = new LQRNineGridImageViewAdapter<NimUserInfo>() {

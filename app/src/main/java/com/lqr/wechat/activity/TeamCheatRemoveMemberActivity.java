@@ -26,8 +26,8 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -44,14 +44,14 @@ public class TeamCheatRemoveMemberActivity extends BaseActivity {
     private ArrayList<String> mWillBeRemovedAccounts = new ArrayList<>();
     private LQRAdapterForRecyclerView<TeamMember> mAdapter;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.btnOk)
+    @BindView(R.id.btnOk)
     Button mBtnOk;
 
-    @InjectView(R.id.etKey)
+    @BindView(R.id.etKey)
     EditText mEtKey;
-    @InjectView(R.id.rvMember)
+    @BindView(R.id.rvMember)
     LQRRecyclerView mRvMember;
 
     @OnClick({R.id.btnOk})
@@ -81,7 +81,7 @@ public class TeamCheatRemoveMemberActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_team_cheat_remove_member);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

@@ -39,8 +39,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 import static com.lqr.wechat.R.id.ivHeader;
@@ -64,23 +64,23 @@ public class TeamCheatCreateActvitiy extends BaseActivity {
     private LQRAdapterForRecyclerView<Contact> mSelectedContactsAdapter;
     private Drawable mSearchDrawable;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.btnOk)
+    @BindView(R.id.btnOk)
     Button mBtnOk;
 
-    @InjectView(R.id.rvSelectedContacts)
+    @BindView(R.id.rvSelectedContacts)
     LQRRecyclerView mRvSelectedContacts;
-    @InjectView(R.id.etKey)
+    @BindView(R.id.etKey)
     EditText mEtKey;
-    @InjectView(R.id.vTop)
+    @BindView(R.id.vTop)
     View mVTop;
 
-    @InjectView(R.id.rvContacts)
+    @BindView(R.id.rvContacts)
     LQRRecyclerView mRvContacts;
-    @InjectView(R.id.quickIndexBar)
+    @BindView(R.id.quickIndexBar)
     QuickIndexBar mQuickIndexBar;
-    @InjectView(R.id.tvLetter)
+    @BindView(R.id.tvLetter)
     TextView mTvLetter;
 
     private View mHeaderView;
@@ -154,7 +154,7 @@ public class TeamCheatCreateActvitiy extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_team_cheat_create);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         initToolbar();
         initHeaderView();

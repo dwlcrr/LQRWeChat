@@ -9,8 +9,8 @@ import android.view.View;
 
 import com.lqr.wechat.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -18,7 +18,7 @@ import butterknife.OnClick;
  * @描述 卡包
  */
 public class CardPaketActivity extends BaseActivity {
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @OnClick({R.id.cvVipCard, R.id.cvFriendsCoupon, R.id.cvMyCoupon})
@@ -39,7 +39,7 @@ public class CardPaketActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_card_packet);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

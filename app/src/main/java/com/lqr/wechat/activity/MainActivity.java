@@ -50,8 +50,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -78,58 +78,58 @@ public class MainActivity extends BaseActivity {
     private AuthBroadcastReceiver mAuthBroadcastReceiver;
     private Observer<StatusCode> mOnlineStatusObserver;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
-    @InjectView(R.id.vpContent)
+    @BindView(R.id.vpContent)
     ViewPager mVpContent;
 
     // 底部
-    @InjectView(R.id.llButtom)
+    @BindView(R.id.llButtom)
     LinearLayout mLlBottom;
 
-    @InjectView(R.id.tvMessageNormal)
+    @BindView(R.id.tvMessageNormal)
     TextView mTvMessageNormal;
-    @InjectView(R.id.tvMessagePress)
+    @BindView(R.id.tvMessagePress)
     TextView mTvMessagePress;
-    @InjectView(R.id.tvMessageTextNormal)
+    @BindView(R.id.tvMessageTextNormal)
     TextView mTvMessageTextNormal;
-    @InjectView(R.id.tvMessageTextPress)
+    @BindView(R.id.tvMessageTextPress)
     TextView mTvMessageTextPress;
-    @InjectView(R.id.tvMessageCount)
+    @BindView(R.id.tvMessageCount)
     public TextView mTvMessageCount;
 
-    @InjectView(R.id.tvContactsNormal)
+    @BindView(R.id.tvContactsNormal)
     TextView mTvContactsNormal;
-    @InjectView(R.id.tvContactsPress)
+    @BindView(R.id.tvContactsPress)
     TextView mTvContactsPress;
-    @InjectView(R.id.tvContactsTextNormal)
+    @BindView(R.id.tvContactsTextNormal)
     TextView mTvContactsTextNormal;
-    @InjectView(R.id.tvContactsTextPress)
+    @BindView(R.id.tvContactsTextPress)
     TextView mTvContactsTextPress;
-    @InjectView(R.id.tvContactCount)
+    @BindView(R.id.tvContactCount)
     public TextView mTvContactCount;
 
-    @InjectView(R.id.tvDiscoveryNormal)
+    @BindView(R.id.tvDiscoveryNormal)
     TextView mTvDiscoveryNormal;
-    @InjectView(R.id.tvDiscoveryPress)
+    @BindView(R.id.tvDiscoveryPress)
     TextView mTvDiscoveryPress;
-    @InjectView(R.id.tvDiscoveryTextNormal)
+    @BindView(R.id.tvDiscoveryTextNormal)
     TextView mTvDiscoveryTextNormal;
-    @InjectView(R.id.tvDiscoveryTextPress)
+    @BindView(R.id.tvDiscoveryTextPress)
     TextView mTvDiscoveryTextPress;
-    @InjectView(R.id.tvDiscoveryCount)
+    @BindView(R.id.tvDiscoveryCount)
     public TextView mTvDiscoveryCount;
 
-    @InjectView(R.id.tvMeNormal)
+    @BindView(R.id.tvMeNormal)
     TextView mTvMeNormal;
-    @InjectView(R.id.tvMePress)
+    @BindView(R.id.tvMePress)
     TextView mTvMePress;
-    @InjectView(R.id.tvMeTextNormal)
+    @BindView(R.id.tvMeTextNormal)
     TextView mTvMeTextNormal;
-    @InjectView(R.id.tvMeTextPress)
+    @BindView(R.id.tvMeTextPress)
     TextView mTvMeTextPress;
-    @InjectView(R.id.tvMeCount)
+    @BindView(R.id.tvMeCount)
     public TextView mTvMeCount;
 
 
@@ -181,7 +181,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
 
         //默认选中第一个

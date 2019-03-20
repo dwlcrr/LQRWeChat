@@ -2,24 +2,22 @@ package com.lqr.wechat.activity;
 
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-
 import com.lqr.wechat.R;
-
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * @创建者 CSDN_LQR
  * @描述 关于微信
  */
 public class AboutActivity extends BaseActivity {
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @Override
     public void initView() {
         setContentView(R.layout.activity_about);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
     }
 

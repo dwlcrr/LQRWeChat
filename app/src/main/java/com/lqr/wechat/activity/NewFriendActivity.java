@@ -31,8 +31,8 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -45,13 +45,13 @@ public class NewFriendActivity extends BaseActivity {
     private List<NewFriend> mNewFriendList = new ArrayList<>();
     private LQRAdapterForRecyclerView<NewFriend> mAdapter;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.etContent)
+    @BindView(R.id.etContent)
     EditText mEtContent;
-    @InjectView(R.id.tvNewFriend)
+    @BindView(R.id.tvNewFriend)
     TextView mTvNewFriend;
-    @InjectView(R.id.rvNewFriend)
+    @BindView(R.id.rvNewFriend)
     LQRRecyclerView mRvNewFriend;
 
     @OnClick({R.id.etContent})
@@ -68,7 +68,7 @@ public class NewFriendActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_new_friend);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
 
         //清空所有的新好友提示

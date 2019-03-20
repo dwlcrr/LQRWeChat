@@ -17,8 +17,8 @@ import com.netease.nimlib.sdk.uinfo.constant.UserInfoFieldEnum;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -29,13 +29,13 @@ public class ChangeSignatureActivity extends BaseActivity {
 
     private String mSignature;
 
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @InjectView(R.id.btnOk)
+    @BindView(R.id.btnOk)
     Button mBtnOk;
-    @InjectView(R.id.etName)
+    @BindView(R.id.etName)
     EditText mEtName;
-    @InjectView(R.id.tvCount)
+    @BindView(R.id.tvCount)
     TextView mTvCount;
 
     @OnClick({R.id.btnOk})
@@ -65,7 +65,7 @@ public class ChangeSignatureActivity extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_change_signature);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         initToolbar();
         mEtName.setText(mSignature);
         mEtName.setSelection(mSignature.length());
